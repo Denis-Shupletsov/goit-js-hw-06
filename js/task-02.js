@@ -4,15 +4,6 @@
 
 //   В JavaScript есть массив строк.
 
-// const ingredients = [
-//   "Potatoes",
-//   "Mushrooms",
-//   "Garlic",
-//   "Tomatos",
-//   "Herbs",
-//   "Condiments",
-// ];
-
 // Напиши скрипт, который для каждого элемента массива ingredients:
 
 // Создаст отдельный элемент < li >.Обзательно используй метод document.createElement().
