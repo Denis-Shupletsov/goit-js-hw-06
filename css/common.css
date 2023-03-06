@@ -23,6 +23,11 @@ button {
   cursor: pointer;
 }
 
-.imgList {
+.list-items {
   margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.list-img {
+  width: 100%;
 }

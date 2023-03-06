@@ -24,14 +24,19 @@ const images = [
   },
 ];
 
-const galleryСreation = images.forEach(image => {
-  const { url, alt } = image;
+
+const galleryСreation = images.forEach((image) => {
   const creatingEl = document.createElement('li');
-  creatingEl.insertAdjacentHTML('beforeend', `<img url= '${url}' alt= '${alt}' >`);
-  creatingEl.classList.add('imgList');
-  images.classList.add
+
+  const { url, alt } = image;
+  creatingEl.insertAdjacentHTML('beforeend', `<img src='${url}' alt='${alt}'>`);
+  creatingEl.classList.add('list-items');
+
   const addGalleryItems = document.querySelector('.gallery');
-  addGalleryItems.append(creatingEl);
+  addGalleryItems.appendChild(creatingEl);
+
+  const imgEl = document.querySelectorAll('img');
+  imgEl.forEach(img => img.classList.add('list-img'));
 
   console.log(creatingEl);
-})
+});
