@@ -11,8 +11,6 @@
 // Добавит элементу класс item.
 // После чего вставит все < li > за одну операцию в список ul#ingredients.
 
-
-
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -21,3 +19,13 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const addItems = ingredients.forEach(ingredient => {
+  const listEl = document.createElement('li');
+  listEl.textContent = ingredient;
+
+  const ingredientsEl = document.querySelector('#ingredients');
+  ingredientsEl.appendChild(listEl);
+
+  console.log(listEl);
+});
