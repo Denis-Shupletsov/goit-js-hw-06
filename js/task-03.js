@@ -25,11 +25,13 @@ const images = [
 ];
 
 const galleryСreation = images.forEach(image => {
+  const { url, alt } = image;
   const creatingEl = document.createElement('li');
-  creatingEl.insertAdjacentHTML('beforeend', `<img url= '${image.url}' alt= '${image.alt}' >`);
+  creatingEl.insertAdjacentHTML('beforeend', `<img url= '${url}' alt= '${alt}' >`);
+  creatingEl.classList.add('imgList');
+  images.classList.add
+  const addGalleryItems = document.querySelector('.gallery');
+  addGalleryItems.append(creatingEl);
 
-  const addGalleryItems =
-
-    console.log(creatingEl);
-
+  console.log(creatingEl);
 })
