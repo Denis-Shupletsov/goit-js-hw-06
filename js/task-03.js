@@ -24,4 +24,12 @@ const images = [
   },
 ];
 
-const сreateMarkup =  
+const galleryСreation = images.forEach(image => {
+  const creatingEl = document.createElement('li');
+  creatingEl.insertAdjacentHTML('beforeend', `<img url= '${image.url}' alt= '${image.alt}' >`);
+
+  const addGalleryItems =
+
+    console.log(creatingEl);
+
+})
