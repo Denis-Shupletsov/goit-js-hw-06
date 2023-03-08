@@ -24,3 +24,13 @@
 //     border - color: #f44336;
 // }
 
+// const input = document.querySelector('#validation-input');
+
+// input.addEventListener('blur', () => {
+//     const expectedLength = input.getAttribute('data-length');
+//     const actualLength = input.value.length;
+//     const isValid = actualLength === Number(expectedLength);
+
+//     input.classList.remove('valid', 'invalid');
+//     input.classList.add(isValid ? 'valid' : 'invalid');
+// });
