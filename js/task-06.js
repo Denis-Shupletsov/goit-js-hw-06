@@ -12,25 +12,15 @@
 // Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
 // Для добавления стилей, используй CSS - классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
-//     #validation - input {
-//     border: 3px solid #bdbdbd;
-// }
+const inputEl = document.querySelector('#validation-input');
 
-// #validation - input.valid {
-//     border - color: #4caf50;
-// }
+inputEl.addEventListener('blur', onInputBlur);
 
-// #validation - input.invalid {
-//     border - color: #f44336;
-// }
+function onInputBlur() {
+    const symbolsEl = inputEl.getAttribute('data-length');
+    const actualLength = inputEl.value.length;
+    const validationEl = actualLength === Number(symbolsEl);
 
-// const input = document.querySelector('#validation-input');
-
-// input.addEventListener('blur', () => {
-//     const expectedLength = input.getAttribute('data-length');
-//     const actualLength = input.value.length;
-//     const isValid = actualLength === Number(expectedLength);
-
-//     input.classList.remove('valid', 'invalid');
-//     input.classList.add(isValid ? 'valid' : 'invalid');
-// });
+    inputEl.classList.remove('invalid');
+    inputEl.classList.add(validationEl ? 'valid' : 'invalid');
+};
