@@ -10,8 +10,8 @@
 const inputEl = document.querySelector('#font-size-control');
 const spanEl = document.querySelector('#text');
 
-inputEl.addEventListener('input', inlineStyle);
+inputEl.addEventListener('input', oninlineStyle);
 
-function inlineStyle(event) {
+function oninlineStyle(event) {
     text.style.fontSize = `${event.target.value}px`
 };
